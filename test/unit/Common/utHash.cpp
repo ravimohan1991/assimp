@@ -40,23 +40,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include "UnitTestPCH.h"
-#include "AbstractImportExportBase.h"
-#include "AssetLib/MMD/MMDImporter.h"
-#include "assimp/postprocess.h"
 
-#include <assimp/Importer.hpp>
+#include <assimp/Hash.h>
 
-using namespace ::Assimp;
+using namespace Assimp;
 
-class utPMXImporter : public AbstractImportExportBase {
-public:
-    virtual bool importerTest() {
-        Assimp::Importer importer;
-        const aiScene *scene = importer.ReadFile( ASSIMP_TEST_MODELS_DIR "/../models-nonbsd/MMD/Alicia_blade.pmx", aiProcess_ValidateDataStructure );
-        return nullptr != scene;
-    }
+class utHash : public ::testing::Test {
+    // empty
 };
 
-TEST_F( utPMXImporter, importTest ) {
-    EXPECT_TRUE( importerTest() );
+TEST_F( utHash, SuperFastHashTest ) {
+    const char *Data = "-21416115v";
+    auto result = SuperFastHash(Data, 10);
+    EXPECT_NE(0, result);
 }
