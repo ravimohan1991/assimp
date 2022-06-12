@@ -50,6 +50,9 @@ add_compile_definitions(ASSIMP_BUILD_NO_M3D_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_IQM_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_3D_IMPORTER)
 
+add_compile_definitions(ASSIMP_BUILD_NO_EXPORT)
+
+
 # Then compile the library under work
 add_subdirectory(code)
 
