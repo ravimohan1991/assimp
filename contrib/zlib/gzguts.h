@@ -19,7 +19,11 @@
 #endif
 
 #include <stdio.h>
+// We are introducing Karma's defines for this peculiar case (well because this
+// is how we uncovered the unistd library). Also note that somehow Linux (Ubuntu) can work without its inclusion.
+#ifdef KR_MAC_PLATFORM
 #include <unistd.h>
+#endif
 #include "zlib.h"
 #ifdef STDC
 #  include <string.h>

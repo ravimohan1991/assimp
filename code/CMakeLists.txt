@@ -18,7 +18,7 @@ file(GLOB FBXFFC AssetLib/FBX/*.cpp)
 #source_group(ASSIMPFFORMATCODE FILES ${OBJFF} ${FBXFF})
 
 # Check the relevance of openddl parser!!!
-file(GLOB OPENDDLC ../contrib/openddlparser/code/*.cpp)
+#file(GLOB OPENDDLC ../contrib/openddlparser/code/*.cpp)
 file(GLOB ZLIBC ../contrib/zlib/*.c)
 
 #source_group(ASSIMP3RDPARTYCODE FILES ${OPENDDL} ${ZLIB})
@@ -36,7 +36,7 @@ file(GLOB OBJFFH AssetLib/Obj/*.h)
 file(GLOB FBXH AssetLib/FBX/*.h)
 
 # Inclusion of 3rd party codebase
-file(GLOB OPENDDLH ../contrib/openddlparser/include/openddlparser/*.h)
+#file(GLOB OPENDDLH ../contrib/openddlparser/include/openddlparser/*.h)
 file(GLOB ZLIBH ../contrib/zlib/*.h)
 
 # Loose header file

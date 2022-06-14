@@ -68,6 +68,7 @@ target_include_directories(AssImp
         ${CMAKE_CURRENT_SOURCE_DIR}/code
         ${CMAKE_CURRENT_SOURCE_DIR}/contrib/
         ${CMAKE_CURRENT_SOURCE_DIR}/contrib/unzip
+		${CMAKE_CURRENT_SOURCE_DIR}/contrib/zlib
     PUBLIC
         # where top-level project will look for the library's public headers
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
