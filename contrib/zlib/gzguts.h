@@ -21,7 +21,9 @@
 #include <stdio.h>
 // We are introducing Karma's defines for this peculiar case (well because this
 // is how we uncovered the unistd library). Also note that somehow Linux (Ubuntu) can work without its inclusion.
-#ifdef KR_MAC_PLATFORM
+// Well actually no, GCC on Linux is spitting warnings about implicit declarations because of this exclusion. So
+// I am including this header for Unix platforms.
+#if defined(KR_MAC_PLATFORM) || defined(KR_LINUX_PLATFORM)
 #include <unistd.h>
 #endif
 #include "zlib.h"
