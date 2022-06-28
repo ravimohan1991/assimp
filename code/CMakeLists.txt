@@ -50,6 +50,15 @@ file(GLOB ZLIBH ../contrib/zlib/*.h)
 list(APPEND LOOSECOMMONH CApi/CInterfaceIOWrapper.h Material/MaterialSystem.h
     ../contrib/unzip/unzip.h ../contrib/unzip/ioapi.h ../contrib/unzip/crypt.h)
 
+# Suppressing deprications like so
+# Not a big fan, but let me see how the things evolve
+# C:\Users\the_cowboy\Misc\KarmaEngine\Karma\vendor\assimp\code\PostProcessing\EmbedTexturesProcess.cpp(157,7):
+# warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. 
+# To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+if(MSVC)
+	add_compile_definitions(_CRT_SECURE_NO_WARNINGS _CRT_NONSTDC_NO_DEPRECATE)
+endif()
+
 #source_group(HEADERFILESCODE FILES ${COMMONH} ${CApi} ${ASSETSH} ${3RDCONTRIB}
 #    CApi/CInterfaceIOWrapper.h Material/MaterialSystem.h)
 
