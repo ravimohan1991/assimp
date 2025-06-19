@@ -3,7 +3,7 @@
 Open Asset Import Library (assimp)
 ---------------------------------------------------------------------------
 
-Copyright (c) 2006-2022, assimp team
+Copyright (c) 2006-2025, assimp team
 
 All rights reserved.
 
@@ -52,5 +52,5 @@ class utHash : public ::testing::Test {
 TEST_F( utHash, SuperFastHashTest ) {
     const char *Data = "-21416115v";
     auto result = SuperFastHash(Data, 10);
-    EXPECT_NE(0, result);
+    EXPECT_NE(0u, result);
 }
