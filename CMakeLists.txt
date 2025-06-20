@@ -49,8 +49,9 @@ add_compile_definitions(ASSIMP_BUILD_NO_MMD_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_M3D_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_IQM_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_3D_IMPORTER)
-
+add_compile_definitions(ASSIMP_BUILD_NO_USD_IMPORTER)
 add_compile_definitions(ASSIMP_BUILD_NO_EXPORT)
+add_compile_definitions(ASSIMP_BUILD_NO_TRIANGULATE_PROCESS)
 
 
 # Then compile the library under work

@@ -14,7 +14,7 @@ file(GLOB COMMONC Common/*.cpp)
 file(GLOB PPROCESSC PostProcessing/*.cpp)
 list(APPEND LOOSECOMMONC CApi/CInterfaceIOWrapper.cpp
     CApi/AssimpCExport.cpp Material/MaterialSystem.cpp
-    ../contrib/unzip/unzip.c ../contrib/unzip/ioapi.c ../contrib/unzip/crypt.c)
+    ../contrib/unzip/unzip.c ../contrib/unzip/ioapi.c Geometry/GeometryUtils.cpp)
 
 #source_group(ASSIMPBASECODE FILES ${COMMONC} ${PPROCESSC} ${LOOSECOMMONC})
 		
@@ -48,7 +48,7 @@ file(GLOB ZLIBH ../contrib/zlib/*.h)
 
 # Loose header file
 list(APPEND LOOSECOMMONH CApi/CInterfaceIOWrapper.h Material/MaterialSystem.h
-    ../contrib/unzip/unzip.h ../contrib/unzip/ioapi.h ../contrib/unzip/crypt.h)
+    ../contrib/unzip/unzip.h ../contrib/unzip/ioapi.h ../contrib/unzip/crypt.h Geometry/GeometryUtils.h)
 
 # Suppressing deprications like so
 # Not a big fan, but let me see how the things evolve
